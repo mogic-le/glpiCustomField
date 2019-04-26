@@ -619,7 +619,7 @@ class PluginFieldsContainer extends CommonDBTM {
             'Printer'            => _n("Printer", "Printers", 2),
             'CartridgeItem'      => _n("Cartridge", "Cartridges", 2),
             'ConsumableItem'     => _n("Consumable", "Consumables", 2),
-            'Phone'              => _n("Phone", "Phones", 2)
+            'Phone'              => _n("Phone", "Phones", 2),
          ];
       }
       $tabs[__('Assets')] = $assets;

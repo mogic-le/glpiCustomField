@@ -767,6 +767,9 @@ class PluginFieldsField extends CommonDBTM {
                      $html.= Html::convDateTime($value);
                   }
                   break;
+               case 'button':
+                  $html.= Html::getSimpleForm($field['default_value'], $field['name'], $txt_label, ['id' => $items_id, 'itemtype' => $itemtype]);
+                  break;
                case 'dropdownuser':
                   if ($massiveaction) {
                      continue;
@@ -859,6 +862,7 @@ class PluginFieldsField extends CommonDBTM {
          'yesno'        => __("Yes/No", "fields"),
          'date'         => __("Date", "fields"),
          'datetime'     => __("Date & time", "fields"),
+         'button'       => __("Button", "fields"),
          'dropdownuser' => _n("User", "Users", 2)
       );
    }
